@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fdfdfd;
+}
+
+/* Overall container */
+.cart-page {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* ✅ Fixed header */
+.cart-header {
+  position: sticky;
+
+  top: 0;
+  z-index: 00;
+  background-color: white;
+  border-bottom: 3px solid black;
+  padding: 15px 0;
+ 
+}
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.heading-qty {
+  margin-left: 150px;
+}
+
+.heading-price {
+  margin-right: 50px;
+}
+
+/* ✅ Scrollable product list */
+.cart-body {
+  margin-left: 100px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.carts-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 40%;
+  padding-left: 10px;
+}
+
+.product-image img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ✅ Quantity Buttons */
+.cart-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quantity {
+  height: 45px;
+  width: 45px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 8px;
+  background-color: orange;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.quantity:hover {
+  background-color: darkorange;
+}
+
+.quantity-value {
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  font-size: 18px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+/* ✅ Total and Buttons scroll normally */
+.total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 22px;
+  margin-right: 100px;
+  margin-top: 40px;
+}
+
+.checkout-button {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+.final-buttons {
+  background-color: orange;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.final-buttons:hover {
+  background-color: darkorange;
+}

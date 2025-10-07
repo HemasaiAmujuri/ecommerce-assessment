@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.shipping-container {
+  width: 70%;
+  margin: 20px auto;
+  padding: 40px 70px 40px 70px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.shipping-body {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 20px; */
+  flex-wrap: wrap;
+}
+
+/* Shipping Form */
+.shipping-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.shipping-left h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 50%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: orange;
+}
+
+/* Confirm Button */
+.confirm-button {
+  
+  background-color: orange;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+margin-top: 0px;
+
+}
+
+.confirm-button:hover {
+  background-color: darkorange;
+}
+
+/* Order Summary */
+.shipping-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.shipping-right h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.summary-box {
+margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  min-height: 200px;
+  background-color: #f5f5f5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shipping-body {
+    flex-direction: column;
+  }
+  .confirm-button {
+    width: 100%;
+  }
+}

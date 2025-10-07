@@ -42,7 +42,14 @@ export default function ProductList() {
   const indexOfFirst = indexOfLast - productsPerPage;
   const currentProducts = products.slice(indexOfFirst, indexOfLast);
   const totalPages = Math.ceil(products.length / productsPerPage);
-
+const cartItems = []
+ const storeItems = (product) => {
+        console.log(product.id, "id")
+        cartItems.push( { id : product.id, quantity : "1" })
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(`Added 1 ${product.title}(s) to cart!`);
+   }
+   
   return (
     <div className="product-list">
       {products.length === 0 ? (
@@ -64,7 +71,7 @@ export default function ProductList() {
                   <h3 className="product-title">{product.title}</h3>
                   <p className="product-price">${product.price}</p>
                 </Link>
-                <button className="add-btn">Add to Cart</button>
+                <button className="add-btn" onClick={() => storeItems(product)}>Add to Cart</button>
               </div>
             ))}
           </div>
