@@ -127,7 +127,7 @@
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.2s ease;
-  width: 20px;
+  /* width: 20px; */
 }
 
 .pagination button:hover {

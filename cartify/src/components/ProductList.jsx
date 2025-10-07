@@ -5,7 +5,7 @@ import '../styles/ProductList.css';
 export default function ProductList() {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 12;
+  const productsPerPage = 15;
 
   const location = useLocation();
 
@@ -14,7 +14,7 @@ export default function ProductList() {
     const category = queryParams.get('category');
     const search = queryParams.get('search');
 
-    let url = 'https://dummyjson.com/products?limit=100';
+    let url = 'https://dummyjson.com/products?limit=194';
     if (category) url = `https://dummyjson.com/products/category/${category}`;
 
     fetch(url)
@@ -42,12 +42,12 @@ export default function ProductList() {
   const indexOfFirst = indexOfLast - productsPerPage;
   const currentProducts = products.slice(indexOfFirst, indexOfLast);
   const totalPages = Math.ceil(products.length / productsPerPage);
-const cartItems = []
+
  const storeItems = (product) => {
-        console.log(product.id, "id")
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         cartItems.push( { id : product.id, quantity : "1" })
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        alert(`Added 1 ${product.title}(s) to cart!`);
+        alert(`Added 1 ${product.title} to cart!`);
    }
    
   return (
